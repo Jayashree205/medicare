@@ -18,20 +18,21 @@ from werkzeug.utils import cached_property
 from werkzeug.utils import redirect as _wz_redirect
 
 import typing as ft
-from ..config import Config
-from ..config import ConfigAttribute
-from ..ctx import _AppCtxGlobals
-from ..helpers import _split_blueprint_path
-from ..helpers import get_debug_flag
-from ..json.provider import DefaultJSONProvider
-from ..json.provider import JSONProvider
-from ..logging import create_logger
-from ..templating import DispatchingJinjaLoader
-from ..templating import Environment
-from .scaffold import _endpoint_from_view_func
-from .scaffold import find_package
-from .scaffold import Scaffold
-from .scaffold import setupmethod
+from config import Config
+from config import ConfigAttribute
+from ctx import _AppCtxGlobals
+from helpers import _split_blueprint_path
+from helpers import get_debug_flag
+from json.provider import DefaultJSONProvider
+from json.provider import JSONProvider
+from logging import create_logger
+from templating import DispatchingJinjaLoader
+from templating import Environment
+from scaffold import _endpoint_from_view_func
+from scaffold import find_package
+from scaffold import Scaffold
+from scaffold import setupmethod
+
 
 if t.TYPE_CHECKING:  # pragma: no cover
     from werkzeug.wrappers import Response as BaseResponse
